@@ -157,18 +157,18 @@ MonteCarlo(
 	dsuccesses[gid] = 0;
 
 	// randomize everything:
-	TimeOfDaySeed();
-	float dholeax = *dholeaxs;
-	float dholeay = *dholeays;
-	float dholear = *dholeaxs;
 
-	float dholebx = *dholebxs;
-	float dholeby = *dholebys;
-	float dholebr = *dholebrs;
+	float dholeax = dholeaxs[gid];
+	float dholeay = dholeays[gid];
+	float dholear = dholeaxs[gid];
 
-	float dholecx = *dholecxs;
-	float dholecy = *dholecys;
-	float dholecr = *dholecrs;
+	float dholebx = dholebxs[gid];
+	float dholeby = dholebys[gid];
+	float dholebr = dholebrs[gid];
+
+	float dholecx = dholecxs[gid];
+	float dholecy = dholecys[gid];
+	float dholecr = dholecrs[gid];
 
 	float da = Length(PinAx - dholeax, PinAy - dholeay);
 	if (da + PinAr <= dholear)
