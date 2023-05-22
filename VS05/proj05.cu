@@ -19,7 +19,7 @@
 
 // setting the number of trials in the monte carlo simulation:
 #ifndef NUMTRIALS
-#define NUMTRIALS 50000
+#define NUMTRIALS 65536
 #endif
 
 #ifndef BLOCKSIZE
@@ -311,7 +311,8 @@ int main(int argc, char *argv[])
 	fprintf(stderr, "%10d , %8d , %10.4lf , %6.2f\n",
 			NUMTRIALS, BLOCKSIZE, megaTrialsPerSecond, 100. * probability);
 #else
-	fprintf(stderr, "Number of Trials = %10d, Blocksize = %8d, MegaTrials/Second = %10.4lf, Probability = %6.2f%%\n",
+	fprintf(stderr, " %10d, %8d, %10.4lf, %6.2f%%\n",
+	//Number of Trials, Blocksize, MegaTrials/Second, Probability
 			NUMTRIALS, BLOCKSIZE, megaTrialsPerSecond, 100. * probability);
 #endif
 
